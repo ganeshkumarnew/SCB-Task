@@ -14,7 +14,7 @@ const GiphyFetchComponent = () => {
 
   async function fetchData(searchItem) {
     await axios
-      .get(SEARCH_ENDPOINT + searchItem + "&api_key=" + API_KEY + "&limit=10")
+      .get(SEARCH_ENDPOINT + searchItem + "&api_key=" + API_KEY + "&limit=30")
       .then((response) => setGifFetchData(response?.data?.data))
       .catch((err) => console.log(err));
   }
